@@ -1,0 +1,19 @@
+.{
+    .name = "libftdi",
+    .version = "1.5.0",
+    .minimum_zig_version = "0.13.0",
+
+    .dependencies = .{
+        .libusb = .{
+            .path = "../libusb",
+        }
+    },
+
+    .paths = .{
+        "README",
+        "COPYING",
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
