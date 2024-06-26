@@ -12,7 +12,7 @@ pub fn build(b: *std.Build) void {
     _ = statically.option(b);
     statically.log("libftdi");
 
-    const libusb = statically.dependency(b, "libusb", target, optimize).artifact("usb");
+    const libusb = statically.dependency(b, "libusb", target, optimize).artifact("usb-1.0");
 
     const options = .{
         // Needed for proper linking.
@@ -30,7 +30,7 @@ pub fn build(b: *std.Build) void {
     const ftdi_version_i = b.addConfigHeader(.{ .style = .{ .cmake = b.path("src/ftdi_version_i.h.in") } }, .{
         .MAJOR_VERSION = "1",
         .MINOR_VERSION = "5",
-        .VERSION_STRING = "1.5",
+        .VERSION_STRING = "1.5-zigify",
         .SNAPSHOT_VERSION = "unknown",
     });
     lib.addConfigHeader(ftdi_version_i);
