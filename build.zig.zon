@@ -1,16 +1,16 @@
 .{
-    .name = "libftdi",
+    .name = "libftdi-zys",
     .version = "1.5.0",
     .minimum_zig_version = "0.13.0",
 
     .dependencies = .{
         .statically = .{
-            .url = "https://github.com/zigify/statically/archive/d4ff4a5f196eb7ff7de9ba92621aaaf2b4667f61.tar.gz",
-            .hash = "122000926af4c10da3512f35ae72cafe5ed70f5ff4e289d0be4a8578d8b5bee2a28c",
+            .url = "https://github.com/zigify/statically/archive/4e054dca69b4eb974d8b0369a06de23878274f26.tar.gz",
+            .hash = "1220d15497d26bea869a45ecf86e696d236b6fbcb3366aadcf934bb4b03c8c8b6263",
         },
-        .libusb = .{
-            .url = "https://github.com/zigify/libusb/archive/refs/heads/v1.0.26.tar.gz",
-            .hash = "1220685e5e68a2599bb9035dfd9024add409d3ce3c4dd161375faf981bb5eeab7558",
+        .@"libusb-zys" = .{
+            .url = "https://github.com/zigify/libusb-zys/archive/refs/heads/release-v1.0.26.tar.gz",
+            .hash = "1220856a40863ea954d40c3fe0c96dc8376f7fcefe74e05d976b1400fff925f87a71",
         },
     },
 

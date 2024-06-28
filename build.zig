@@ -12,10 +12,9 @@ pub fn build(b: *std.Build) void {
     _ = statically.option(b);
     statically.log("libftdi");
 
-    const libusb = statically.dependency(b, "libusb", target, optimize).artifact("usb-1.0");
+    const libusb = statically.dependency(b, "libusb-zys", target, optimize).artifact("usb-1.0");
 
     const options = .{
-        // Needed for proper linking.
         .name = "ftdi1",
         .target = target,
         .optimize = optimize,
